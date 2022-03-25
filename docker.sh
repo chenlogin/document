@@ -65,7 +65,7 @@ jenkins/jenkins
 
 
 //本机目录复制到远程
-scp -prq /Users/chen/Documents/workspace/alkaid/docs/.vuepress/dist/. root@10.198.20.35:/data/workspace/www/element.17zuoye.net
+scp -prq /Users/chen/Documents/workspace/alkaid/docs/.vuepress/dist/. root@10.198.xx.xx:/data/workspace/www/element.17zuoye.net
 
 
 
