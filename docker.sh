@@ -20,6 +20,28 @@ docker run \
   -v /opt/nginx/logs:/var/log/nginx \
   nginx
 
+# nginx展示文件目录
+# vi /etc/nginx/conf.d/default.conf
+# location / {   
+#   root /usr/share/nginx/html //指定实际目录绝对路径；   
+#   autoindex on;              //开启目录浏览功能；   
+#   autoindex_exact_size off;  //关闭详细文件大小统计，让文件大小显示MB，GB单位，默认为b；   
+#   autoindex_localtime on;    //开启以服务器本地时区显示文件修改日期！   
+# }
+# 只在download目录添加浏览功能
+# location /download {  
+#  ... 
+# } 
+docker run \
+  --name nginx-pcclient \
+  -d \
+  -p 8081:80 \
+  -v /data/workspace/pcClient:/usr/share/nginx/html:ro \
+  -v /opt/nginx-pcclient/conf/nginx.conf:/etc/nginx/nginx.conf:ro \
+  -v /opt/nginx-pcclient/conf.d:/etc/nginx/conf.d \
+  -v /opt/nginx-pcclient/logs:/var/log/nginx \
+  nginx
+
 
 
 # elementci容器
