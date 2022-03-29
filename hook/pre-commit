@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# npm run lint
+# # 获取上面脚本的退出码
+# exitCode="$?"
+# exit $exitCode
+
+
+echo 'npm run lint'
+exit 0
